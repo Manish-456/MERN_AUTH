@@ -14,7 +14,7 @@ let config = {
     theme: "default",
     product: {
       name: "MERN-AUTH",
-      link: "https://mern-auth.onrender.com",
+      link: "https://mern-auth-jfvr.onrender.com",
     },
   });
 

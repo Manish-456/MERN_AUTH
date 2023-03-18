@@ -8,7 +8,7 @@ const app = express();
 
 app.use(express.json());
 app.use(cors({
-  origin : 'https://mern-auth.onrender.com'
+  origin : 'https://mern-auth-jfvr.onrender.com'
 }));
 app.use(morgan("tiny"));
 app.disable("x-powered-by");
