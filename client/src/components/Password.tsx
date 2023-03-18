@@ -74,7 +74,7 @@ const Password = () => {
                 placeholder="Password"
               />
               <button
-                className={`${styles.btn} bg-indigo-500 hover:bg-[#ff6a6a]`}
+                className={`btn bg-indigo-500 hover:bg-[#ff6a6a]`}
                 type="submit"
               >
                 Sign Up
