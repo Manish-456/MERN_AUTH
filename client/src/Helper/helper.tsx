@@ -4,7 +4,7 @@ import jwtDecode from "jwt-decode";
 
 /** authenticate function */
 
-axios.defaults.baseURL = "http://localhost:8080";
+axios.defaults.baseURL = "https://mern-web-service.onrender.com";
 
 interface ResponseError {
   error: string;

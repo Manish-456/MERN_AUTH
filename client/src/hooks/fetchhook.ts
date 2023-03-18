@@ -8,7 +8,7 @@ interface ApiData<T> {
   status: number | null;
   serverError: T  | unknown;
 }
-axios.defaults.baseURL = "http://localhost:8080";
+axios.defaults.baseURL = "https://mern-web-service.onrender.com";
 const useFetch = <T>(
   query: string
 ): [ApiData<T>, React.Dispatch<React.SetStateAction<ApiData<T>>>] => {
