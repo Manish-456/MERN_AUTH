@@ -49,7 +49,7 @@ const Password = () => {
     <main className="container mx-auto">
       <Toaster position="top-center" reverseOrder={false}></Toaster>
       <div className="flex justify-center  items-center h-screen">
-        <div className={styles.glass}>
+        <div className={"glass"}>
           <div className="title flex flex-col  items-center">
             <h4 className="text-3xl font-bold">
               Hello {apiData?.username || apiData?.firstName || username}
@@ -62,7 +62,7 @@ const Password = () => {
             <div className="flex justify-center py-4">
               <img
                 src={apiData?.profile || "img/noprofile.png"}
-                className={styles.profile_img}
+                className={"profile_img"}
                 alt="avatar"
               />
             </div>
@@ -70,7 +70,7 @@ const Password = () => {
               <input
                 {...formik.getFieldProps("password")}
                 type="text"
-                className={styles.textbox}
+                className={"textbox"}
                 placeholder="Password"
               />
               <button

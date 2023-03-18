@@ -1,9 +1,0 @@
-.glass {
-    @apply h-fit w-5/6 ;
-}
-.profile_img{
-    @apply md:w-[150px]   cursor-pointer object-cover md:h-[150px] h-[100px] w-[100px];
-}
-.textbox{
-    @apply md:w-3/4 w-full
-}

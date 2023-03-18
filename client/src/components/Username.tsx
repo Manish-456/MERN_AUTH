@@ -1,4 +1,4 @@
-import styles from "../style/Username.module.css";
+
 import { Link, useNavigate } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 import { useFormik } from "formik";
@@ -32,7 +32,7 @@ const Username = () => {
     <main className="container mx-auto">
       <Toaster position="top-center" reverseOrder={false}></Toaster>
       <div className="flex justify-center  items-center h-screen">
-        <div className={styles.glass}>
+        <div className={"glass"}>
           <div className="title flex flex-col  items-center">
             <h4 className="text-3xl font-bold">Hello !</h4>
             <span className="py-4 text-lg text-center w-2/3 text-gray-500">
@@ -43,7 +43,7 @@ const Username = () => {
             <div className="flex justify-center py-4">
               <img
                 src="img/noprofile.png"
-                className={styles.profile_img}
+                className={"profile_img"}
                 alt="avatar"
               />
             </div>
@@ -52,11 +52,11 @@ const Username = () => {
                 {...formik.getFieldProps("username")}
                 type="text"
                 spellCheck={true}
-                className={styles.textbox}
+                className={"textbox"}
                 placeholder="Username"
               />
               <button
-                className={`${styles.btn} bg-indigo-500 hover:bg-[#ff6a6a]`}
+                className={`btn bg-indigo-500 hover:bg-[#ff6a6a]`}
                 type="submit"
               >
                 Let's Go

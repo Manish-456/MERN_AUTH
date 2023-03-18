@@ -1,12 +1,11 @@
 import { useState } from "react";
-import styles from "../style/username.module.css";
 import { Link, useNavigate } from "react-router-dom";
 import { toast, Toaster } from "react-hot-toast";
 import { useFormik } from "formik";
 import convertToBase64 from "../Helper/convert";
 import { FormValues, registerValidation } from "../Helper/Validate";
 import { registerUser } from "../Helper/helper";
-import extend from '../style/Profile.module.css'
+
 
 const Register = () => {
   const [file, setFile] = useState<string>();
@@ -44,7 +43,7 @@ const Register = () => {
     <main className="container mx-auto">
       <Toaster position="top-center" reverseOrder={false}></Toaster>
       <div className="flex justify-center  items-center h-screen">
-        <div className={`${styles.glass} ${extend.glass} w-[45%]`}>
+        <div className={`glass glass_profile w-[45%]`}>
           <div className="title flex flex-col  items-center">
             <h4 className="md:text-5xl text-3xl font-bold">Register</h4>
             <span className="py-4 text-xl text-center w-2/3 text-gray-500">
@@ -56,7 +55,7 @@ const Register = () => {
               <label htmlFor="profile">
                 <img
                   src={file || "img/noprofile.png"}
-                  className={styles.profile_img}
+                  className="profile_img"
                   alt="avatar"
                 />
               </label>
@@ -72,23 +71,23 @@ const Register = () => {
               <input
                 {...formik.getFieldProps("username")}
                 type="text"
-                className={styles.textbox}
+                className="textbox"
                 placeholder="username"
               />
               <input
                 {...formik.getFieldProps("email")}
                 type="text"
-                className={styles.textbox}
+                className="textbox"
                 placeholder="email"
               />
               <input
                 {...formik.getFieldProps("password")}
                 type="text"
-                className={styles.textbox}
+                className="textbox"
                 placeholder="Password"
               />
               <button
-                className={`${styles.btn} bg-indigo-500 hover:bg-[#ff6a6a]`}
+                className={`btn bg-indigo-500 hover:bg-[#ff6a6a]`}
                 type="submit"
               >
                 Register

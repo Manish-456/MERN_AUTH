@@ -1,10 +1,9 @@
 import { useState } from "react";
-import styles from "../style/username.module.css";
 import {  useNavigate } from "react-router-dom";
 import { toast, Toaster } from "react-hot-toast";
 import { useFormik } from "formik";
 import convertToBase64 from "../Helper/convert";
-import extend from '../style/Profile.module.css'
+
 import { FormValues, profileValidation } from "../Helper/Validate";
 
 import useFetch from "../hooks/fetchhook";
@@ -65,7 +64,7 @@ const [{ isLoading, serverError, apiData }] = useFetch('');
     <main className="container mx-auto">
       <Toaster position="top-center" reverseOrder={false}></Toaster>
       <div className="flex justify-center  items-center h-screen">
-        <div className={`${styles.glass} mt-20 md:mt-0 ${extend.glass} w-[45%]`}>
+        <div className={`glass mt-20 md:mt-0 glass_profile w-[45%]`}>
           <div className="title flex flex-col  items-center ">
             <h4 className="md:text-5xl text-2xl font-bold">Profile</h4>
             <span className="py-4 text-lg md:text-xl text-center w-2/3 text-gray-500">
@@ -77,7 +76,7 @@ const [{ isLoading, serverError, apiData }] = useFetch('');
               <label htmlFor="profile">
                 <img
                   src={apiData?.profile || file ||  "img/noprofile.png"}
-                  className={`${styles.profile_img} ${extend.profile_img}`}
+                  className={`profile_img profile_img_profile`}
                   alt="avatar"
                 />
               </label>
@@ -94,13 +93,13 @@ const [{ isLoading, serverError, apiData }] = useFetch('');
               <input
                 {...formik.getFieldProps("firstName")}
                 type="text"
-                className={`${styles.textbox} ${extend.textbox}`}
+                className={`textbox textbox_profile`}
                 placeholder="FirstName"
               />
                 <input
                 {...formik.getFieldProps("lastName")}
                 type="text"
-                className={`${styles.textbox} ${extend.textbox}`}
+                className={`textbox textbox_profile`}
                 placeholder="LastName"
               />
               </div>
@@ -108,13 +107,13 @@ const [{ isLoading, serverError, apiData }] = useFetch('');
               <input
                 {...formik.getFieldProps("mobile")}
                 type="text"
-                className={`${styles.textbox} ${extend.textbox}`}
+                className={`textbox textbox_profile`}
                 placeholder="Mobile No."
               />
                 <input
                 {...formik.getFieldProps("email")}
                 type="text"
-                className={`${styles.textbox} ${extend.textbox}`}
+                className={`textbox textbox_profile`}
                 placeholder="Email*"
               />
               </div>
@@ -122,11 +121,11 @@ const [{ isLoading, serverError, apiData }] = useFetch('');
               <input
                 {...formik.getFieldProps("address")}
                 type="text"
-                className={`${styles.textbox} ${extend.textbox}`}
+                className={`textbox textbox_profile`}
                 placeholder="Address"
               />
                  <button
-                className={`${styles.btn} bg-indigo-500 hover:bg-[#ff6a6a]`}
+                className={`btn bg-indigo-500 hover:bg-[#ff6a6a]`}
                 type="submit"
               >
                 Update

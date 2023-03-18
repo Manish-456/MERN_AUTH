@@ -1,4 +1,4 @@
-import styles from "../style/username.module.css";
+
 
 import { toast, Toaster } from "react-hot-toast";
 import { useFormik } from "formik";
@@ -58,7 +58,7 @@ const Reset = () => {
     <main className="container mx-auto">
       <Toaster position="top-center" reverseOrder={false}></Toaster>
       <div className="flex justify-center  items-center h-screen">
-        <div className={styles.glass}>
+        <div className="glass">
           <div className="title flex flex-col  items-center">
             <h4 className="text-5xl font-bold">Reset Password!</h4>
             <span className="py-4 text-xl text-center w-2/3 text-gray-500">
@@ -73,17 +73,17 @@ const Reset = () => {
               <input
                 {...formik.getFieldProps("password")}
                 type="text"
-                className={styles.textbox}
+                className="textbox"
                 placeholder="New Password"
               />
               <input
                 {...formik.getFieldProps("confirm_pwd")}
                 type="text"
-                className={styles.textbox}
+                className="textbox"
                 placeholder="Confirm Password"
               />
               <button
-                className={`${styles.btn} bg-indigo-500 hover:bg-[#ff6a6a]`}
+                className={`btn bg-indigo-500 hover:bg-[#ff6a6a]`}
                 type="submit"
               >
                 Reset
